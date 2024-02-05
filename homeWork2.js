@@ -1,10 +1,12 @@
 // Отримати рік від користувача через prompt
 let yearInput = prompt("Введіть рік:");
 
-// Перевірка, чи введено число та чи воно не від'ємне
-if (!isNaN(yearInput) && yearInput >= 0) {
+// Перевірка, чи введено додатнє число
+if (!yearInput || +yearInput < 0) {
+    console.log("Будь ласка, введіть додатне число.");
+} else {
     // Перетворити рік на число
-    const year = parseInt(yearInput);
+    const year = +yearInput;
 
     // Визначення форми слова "рік"
     let wordForm;
@@ -18,8 +20,4 @@ if (!isNaN(yearInput) && yearInput >= 0) {
 
     // Виведення результату
     console.log(`Введений рік: ${year} ${wordForm}`);
-} else {
-    console.log("Будь ласка, введіть додатне число.");
 }
-
-
