@@ -9,13 +9,13 @@ if (!yearInput || +yearInput < 0) {
     const year = +yearInput;
 
     // Визначення форми слова "рік"
-    let wordForm;
+    let wordForm = "років";
+
     if (year % 10 === 1 && year % 100 !== 11) {
         wordForm = "рік";
-    } else if ([2, 3, 4].includes(year % 10) && ![12, 13, 14].includes(year % 100)) {
+    } else if ((year % 10 === 2 || year % 10 === 3 || year % 10 === 4) &&
+               (year % 100 < 12 || year % 100 > 14)) {
         wordForm = "роки";
-    } else {
-        wordForm = "років";
     }
 
     // Виведення результату
