@@ -2,8 +2,10 @@
 const unit = prompt("Введіть одиницю вимірювання (км, год, кг):");
 const value = parseFloat(prompt("Введіть кількість:"));
 
-// Функція для конвертації одиниць виміру
-function convertUnits(unit, value) {
+// Перевірка на введення числа
+if (isNaN(value)) {
+    console.log("Будь ласка, введіть коректне число.");
+} else {
     let result;
 
     switch (unit) {
@@ -22,6 +24,3 @@ function convertUnits(unit, value) {
 
     console.log(result);
 }
-
-// Виклик функції для конвертації
-convertUnits(unit, value);
