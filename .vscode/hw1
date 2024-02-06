@@ -10,3 +10,16 @@ function drawTriangle (height, symbol) {
  }
  drawTriangle(5, '*');
     
+
+ function drawTriangle (height, symbol, actingheight = '') {
+    if (actingheight > height){
+        return;
+
+
+
+
+
+
+
+
+    }
