@@ -1,6 +1,6 @@
 function pow(x, y){
-    let solution = 0;
-    for (let i = 0; i <= y; i++){
+    let solution = 1;
+    for (let i = 0; i < y; i++){
         solution *= x;
     }
     return solution;
