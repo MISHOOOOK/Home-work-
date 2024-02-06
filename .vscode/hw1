@@ -1,0 +1,7 @@
+function drawTriangle (height, symbol ) {
+for ( let i=1; i<=height; i++) {
+
+}
+}
+drawTriangle(5, '*');
+
