@@ -1,3 +1,4 @@
+/** 
 function drawTriangle (height, symbol) {
 
     for (let i = 1; i <= height; i++) {
@@ -9,10 +10,9 @@ function drawTriangle (height, symbol) {
     }
  }
  drawTriangle(5, '*');
-    
+    */
 
- function drawTriangle (height, symbol, actingheight = 1) {
-    let line = '';
+ function drawTriangle (height, symbol, actingheight = 1, line = '') {
     if (actingheight > height){
         return;
     }
