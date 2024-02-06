@@ -11,15 +11,12 @@ function drawTriangle (height, symbol) {
  drawTriangle(5, '*');
     
 
- function drawTriangle (height, symbol, actingheight = '') {
+ function drawTriangle (height, symbol, actingheight = 1) {
+    let line = '';
     if (actingheight > height){
         return;
-
-
-
-
-
-
-
-
     }
+    line += symbol;
+    console.log(line);
+
+}
