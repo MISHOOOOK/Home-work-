@@ -18,5 +18,7 @@ function drawTriangle (height, symbol) {
     }
     line += symbol;
     console.log(line);
+    drawTriangle(height, symbol, actingheight + 1, line);
 
 }
+drawTriangle(5, '*');
