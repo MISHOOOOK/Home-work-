@@ -8,3 +8,8 @@ function newIsNaNFunction(value) {
 // Приклади 
 console.log(newIsNaNFunction(NaN)); 
 console.log(newIsNaNFunction(123)); 
+console.log(newIsNaNFunction('abc'));
+console.log(newIsNaNFunction(undefined)); 
+console.log(newIsNaNFunction(false));
+console.log(newIsNaNFunction(true)); 
+console.log(newIsNaNFunction('21414')); 
