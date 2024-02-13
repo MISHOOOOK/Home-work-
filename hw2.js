@@ -10,6 +10,15 @@ var services = {
               }
             }
             return total;
+        },
+        minPrice: function() {
+          let min = Infinity;
+          for (let service in this) {
+            if (!isNaN(parseInt(this[service]))) {
+              min = Math.min(min, parseInt(this[service]));
+            }
+          }
+          return min;
 
 
 
