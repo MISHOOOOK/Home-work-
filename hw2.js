@@ -40,3 +40,17 @@ const company = {
         }
     ]
 };
+function findValueByKey(companyName) {
+    for (let i = 0; i < company.clients.length; i++) {
+        const client = company.clients[i];
+        if (client.name === companyName) {
+            return client;
+        }
+        if (client.partners) {
+            const result = findValueByKeyInPartners(client.partners, companyName);
+            if (result) {
+                return result;
+            }
+        }
+    }
+       return null;
