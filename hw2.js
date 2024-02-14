@@ -70,5 +70,5 @@ function findValueByKeyInPartners(partners, companyName) {
     }
        return null;
 };
-const result = findValueByKey("Клієнт 1.2.3");
+const result = findValueByKey("Клієнт 2");
 console.log(result);
