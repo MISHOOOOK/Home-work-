@@ -53,4 +53,22 @@ function findValueByKey(companyName) {
             }
         }
     }
+    return null;
+};
+function findValueByKeyInPartners(partners, companyName) {
+    for (let i = 0; i < partners.length; i++) {
+        const partner = partners[i];
+               if (partner.name === companyName) {
+            return partner;
+        }
+                if (partner.partners) {
+            const result = findValueByKeyInPartners(partner.partners, companyName);
+            if (result) {
+                return result;
+            }
+        }
+    }
        return null;
+};
+const result = findValueByKey("Клієнт 1.2.3");
+console.log(result);
