@@ -12,6 +12,9 @@ let arr = [
     {
         userName: "Andrii",
         lastName: "",
-        email: "andrii@mail.ru" // Нам такі не підходять
+        email: "andrii@mail.ru" 
     },
 ];
+let RE = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)/;
+let neededEmails = arr.
+console.log(neededEmails);
