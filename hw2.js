@@ -15,6 +15,6 @@ let arr = [
         email: "andrii@mail.ru" 
     },
 ];
-let RE = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)/;
-let neededEmails = arr.
+let RE = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@(?:gmail\.com|yahoo\.com)/;
+let neededEmails = arr.filter(obj => RE.test(obj.email));
 console.log(neededEmails);
