@@ -8,7 +8,7 @@ let arr = [
         userName: "Dmitro",
         lastName: "Porohov",
         email: "dmitro.porohov@yahoo.com"
-    },
+    },  
     {
         userName: "Andrii",
         lastName: "",
@@ -16,5 +16,11 @@ let arr = [
     },
 ];
 let RE = /[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@(?:gmail\.com|yahoo\.com)/;
-let neededEmails = arr.filter(obj => RE.test(obj.email));
+let neededEmails = arr.reduce((a, obj) => {
+    if (RE.test(obj.email)) {
+        a.push(obj.email);
+    }
+    return a;
+}, []);
+
 console.log(neededEmails);
